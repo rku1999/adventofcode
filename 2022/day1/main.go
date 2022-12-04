@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"fmt"
 	"log"
-	"os"
-	"path/filepath"
 	"sort"
 	"strconv"
+
+	"github.com/rku1999/adventofcode/2022/util"
 )
 
 func maxInArray(arr []int) int {
@@ -29,16 +29,7 @@ func sumSlice(arr []int) int {
 }
 
 func main() {
-	abs_fname, err := filepath.Abs("input.txt")
-
-	if err != nil {
-		log.Fatal(err)
-	}
-	file, err := os.Open(abs_fname)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
+	file := util.OpenFile("input.txt")
 
 	elfCalories := []int{}
 	subSum := 0
