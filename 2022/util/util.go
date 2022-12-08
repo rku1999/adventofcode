@@ -20,3 +20,21 @@ func OpenFile(fname string) *os.File {
 
 	return file
 }
+
+func MaxInArray(arr []int) int {
+	max := arr[0]
+	for _, num := range arr {
+		if num > max {
+			max = num
+		}
+	}
+	return max
+}
+
+func SumSlice(arr []int) int {
+	sum := 0
+	for _, num := range arr {
+		sum += num
+	}
+	return sum
+}

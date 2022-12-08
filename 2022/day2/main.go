@@ -107,8 +107,4 @@ func main() {
 	}
 
 	fmt.Println(score) // part 2
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
 }
